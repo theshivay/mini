@@ -4,5 +4,5 @@ module.exports = {
   port: process.env.PORT || 5000,
   mongoURI: process.env.MONGO_URI,
   jwtSecret: process.env.JWT_SECRET,
-  jwtExpiresIn: "1h", // Example: Adjust as needed
+  jwtExpiresIn: "1h",
 };

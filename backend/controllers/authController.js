@@ -3,8 +3,8 @@ const generateToken = require("../utils/generateToken");
 
 exports.register = async (req, res) => {
   try {
-    const { username, email, password } = req.body;
-    const user = new User({ username, email, password });
+    const { username, email, password,role } = req.body;
+    const user = new User({ username, email, password ,role});
     await user.save();
     res.status(201).json({ message: "User registered successfully" });
   } catch (err) {
@@ -20,7 +20,7 @@ exports.login = async (req, res) => {
       return res.status(401).json({ message: "Invalid credentials" });
     }
     const token = generateToken(user);
-    res.json({ token, user: { id: user._id, username: user.username, roles: user.roles } });
+    res.status(201).json({ token, user: { id: user._id, username: user.username, role: user.role } });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

@@ -14,18 +14,22 @@ const app = express();
 app.use(errorHandler);
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(helmet());
 app.use(morgan("dev"));
 
 // Routes
-app.use("/api/auth", authRoutes);
-app.use("/api/resources", resourceRoutes);
+// app.use("/api/auth", authRoutes);
+// app.use("/api/resources", resourceRoutes);
+const authRouter = require("./routes/authRoutes");
+app.use(authRouter);
 
 // Connect to MongoDB
-mongoose
-  .connect(config.mongoURI)
-  .then(() => console.log("MongoDB Connected"))
-  .catch((err) => console.error(err));
+const connectDB = require("./db/dbconnect");
 
-module.exports = app;
+connectDB();
+
+app.listen(config.port, () => {
+    console.log(`Server running on http://localhost:${config.port}`);
+});

@@ -4,7 +4,7 @@ const { validateUserRegistration } = require("../utils/validate");
 
 const router = express.Router();
 
-router.post("/register", validateUserRegistration, register);
+router.post("/register", register);
 router.post("/login", login);
 
 module.exports = router;
