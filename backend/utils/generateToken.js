@@ -3,7 +3,7 @@ const config = require("../config");
 
 const generateToken = (user) => {
   console.log(user);
-  return jwt.sign({ id: user._id, roles: user.roles }, config.jwtSecret, {
+  return jwt.sign({ id: user._id, role: user.role }, config.jwtSecret, {
     expiresIn: config.jwtExpiresIn,
   });
 };
