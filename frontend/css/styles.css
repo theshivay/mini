@@ -1,0 +1,216 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #007bff;
+    padding: 15px;
+    color: white;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    margin: 0 10px;
+  }
+  
+  .navbar a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  table td button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  table td button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Pagination Styles */
+  #paginationControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  #paginationControls button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  #paginationControls button:hover {
+    background-color: #0056b3;
+  }
+  
+  #paginationControls button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  #pageIndicator {
+    font-size: 18px;
+  }
+  
+  /* Form Styles */
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #218838;
+  }
+  
+  /* Alert Styles */
+  .alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .alert-success {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .alert-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .alert-info {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .container {
+      padding: 10px;
+    }
+  
+    table, #paginationControls {
+      width: 100%;
+      overflow-x: auto;
+    }
+  
+    form {
+      width: 100%;
+    }
+  
+    #paginationControls {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    #paginationControls button {
+      margin: 5px 0;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .navbar a {
+      font-size: 16px;
+      padding: 8px 12px;
+    }
+  
+    table th, table td {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    #paginationControls button {
+      padding: 8px 15px;
+    }
+  
+    form input, form select, form button {
+      font-size: 14px;
+    }
+  }
+  
